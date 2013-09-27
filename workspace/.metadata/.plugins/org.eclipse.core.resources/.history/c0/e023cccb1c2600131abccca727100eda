@@ -1,0 +1,98 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+.headerArea {
+	width: 100%;
+	height: 90px;
+	background-color: #FFFFFF;
+	position: fixed;
+}
+
+.headerlogo {
+background-image: url("../css/images/logo.png");
+background-size: 200px 87px;
+height: 83px;
+width: 200px;
+display: inline-block;
+position: relative;
+background-repeat: no-repeat;
+margin: 5px 0 0 1%;
+}
+
+.headerContent {
+	display: inline-block;
+height: 100%;
+width: 40%;
+background-color: #ffffff;
+float: right;
+}
+
+.headerContent > div {
+	display: inline-block;
+height: 46px;
+width: 100px;
+text-align: center;
+line-height: 50px;
+border-radius: 29px;
+margin: 15px 10px 0 0;
+font-size: 16px;
+font-weight: bold;
+}
+
+.signuplink {
+	
+}
+
+.loginlink {
+	
+}
+
+.postride {
+	
+}
+
+.destinationContent {
+	width: 100%;
+	height: 250px;
+	background-color: lightblue;
+}
+
+.rideContainer {
+	width: 300px;
+height: 170px;
+background-color: #D3D3D3;
+border: 2px solid gray;
+border-radius: 20px;
+	-webkit-box-shadow: -7px 0px 22px rgba(36, 38, 50, 0.88);
+-moz-box-shadow:    -7px 0px 22px rgba(36, 38, 50, 0.88);
+box-shadow:         -7px 0px 22px rgba(36, 38, 50, 0.88);
+position: relative;
+top: 15%;
+left: 14%;
+}
+
+.rideStartPoint,
+.rideDestinPoint {
+	width: 220px;
+	height: 30px;
+	outline: none;
+	margin: 15px 0 0 23px;
+	line-height: 30px;
+	font-size: 16px;
+	border: none;
+	border-radius: 5px;
+	padding-left: 30px;
+}
+
+.rideDate {
+	width: 110px;
+	height: 30px;
+	outline: none;
+	margin: 15px 0 0 23px;
+	line-height: 30px;
+	font-size: 16px;
+	border: none;
+	border-radius: 5px;
+	padding-left: 30px;
+}

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+ "-//Hibernate/Hibernate Mapping DTD//EN"
+ "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"> 
+
+<hibernate-mapping>
+   <class name="com.friends.keepgoing.hibernate.javabean.CabbiePost" table="Cabbie_Post">
+      <meta attribute="class-description">
+         This class contains the cabbie post detail. 
+      </meta>
+      <id name="post_no" type="int" column="post_no">
+         <generator class="native"/>
+      </id>
+      <property name="user_name" column="user_name" type="string"/>
+      <property name="departure" column="departure" type="string"/>
+      <property name="destination" column="destination" type="string"/>
+      <property name="departure_date" column="departure_date" type="date"/>
+      <property name="departure_time" column="departure_time" type="time"/>
+      <property name="arrival_date" column="arrival_date" type="date"/>
+      <property name="arrival_time" column="arrival_time" type="time"/>
+      <property name="posted_date_time" column="posted_date_time" type="date"/>
+      <property name="seat_capacity" column="seat_capacity" type="int"/>
+      <property name="vehicle_name" column="vehicle_name" type="string"/>
+      <property name="vehicle_no" column="vehicle_no" type="string"/>
+      <property name="driver_license" column="driver_license" type="string"/>
+      <property name="cost" column="cost" type="int"/>
+      <property name="post_status" column="post_status" type="string"/>
+      <property name="occurance_type" column="occurance_type" type="string"/>
+      <property name="description" column="description" type="string"/>
+   </class>
+</hibernate-mapping>
+

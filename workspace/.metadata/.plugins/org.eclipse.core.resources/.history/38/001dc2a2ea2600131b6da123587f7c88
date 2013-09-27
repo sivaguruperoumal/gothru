@@ -1,0 +1,194 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+.headerArea {
+	width: 1349px;
+	height: 85px;
+	background-color: #FFFFFF;
+	position: fixed;
+}
+
+.headerlogo {
+	background-image: url("../css/images/logo.png");
+	background-size: 200px 85px;
+	height: 85px;
+	width: 200px;
+	display: inline-block;
+	position: relative;
+	background-repeat: no-repeat;
+	margin: 0 0 0 5%;
+}
+
+.headerlogo:hover {
+	background-size: 210px 90px;
+	height: 90px;
+	width: 210px;
+	transform:rotate(-4deg);
+	-ms-transform:rotate(-4deg); /* IE 9 */
+	-webkit-transform:rotate(-4deg); /* Safari and Chrome */
+}
+
+.headerContent {
+	display: inline-block;
+	height: 100%;
+	width: 540px;
+	background-color: #ffffff;
+	float: right;
+}
+
+.headerContent > div {
+	display: inline-block;
+	height: 35px;
+	width: 100px;
+	text-align: center;
+	line-height: 35px;
+	margin: 26px 10px 0 0;
+	font-size: 16px;
+	font-weight: bold;
+	color: #ffffff;
+	background-color: #f02f17;
+	border-radius: 5px;
+	transform:rotate(-4deg);
+	-ms-transform:rotate(-4deg); /* IE 9 */
+	-webkit-transform:rotate(-4deg); /* Safari and Chrome */
+}
+
+.headerContent > div:hover {
+	transform:rotate(0deg);
+	-ms-transform:rotate(0deg); /* IE 9 */
+	-webkit-transform:rotate(0deg); /* Safari and Chrome */
+	background-color: #FF1111;
+	color: #D3D3D3;
+}
+
+.signuplink: hover {
+	
+}
+
+.loginlink: hover {
+	
+}
+
+.postride: hover {
+	
+}
+
+.destinationContent {
+	width: 100%;
+	height: 350px;
+	background-image: url("../css/images/pagepic.jpg");
+	background-size: 100% 350px;
+}
+
+.rideContainer {
+	width: 300px;
+	height: 175px;
+	background-color: #f02f17;
+	border: 2px solid gray;
+	border-radius: 20px;
+	-webkit-box-shadow: -7px 0px 22px rgba(36, 38, 50, 0.88);
+	-moz-box-shadow: -7px 0px 22px rgba(36, 38, 50, 0.88);
+	box-shadow: -7px 0px 22px rgba(36, 38, 50, 0.88);
+	position: relative;
+    margin: 3% 0 0 8%;
+   	transform:rotate(-2deg);
+	-ms-transform:rotate(-2deg); /* IE 9 */
+	-webkit-transform:rotate(-2deg); /* Safari and Chrome */
+	padding-top: 25px;
+	display: inline-block;
+	bottom: 90px;
+}
+
+.rideContainer * {
+	 transform:rotate(2deg);
+	-ms-transform:rotate(2deg); /* IE 9 */
+	-webkit-transform:rotate(2deg); /* Safari and Chrome */
+}
+
+.rideStartPoint,
+.rideDestinPoint {
+	width: 220px;
+	height: 30px;
+	outline: none;
+	margin: 15px 0 0 23px;
+	line-height: 30px;
+	font-size: 16px;
+	border: none;
+	border-radius: 5px;
+	padding-left: 30px;
+}
+
+.rideDate {
+	width: 85px;
+	height: 30px;
+	outline: none;
+	margin: 15px 0 0 23px;
+	line-height: 30px;
+	font-size: 16px;
+	border: none;
+	border-radius: 5px;
+	padding-left: 30px;
+	bottom: 26px;
+	position: relative;
+}
+
+.searchRideBtn {
+	display: inline-block;
+	height: 60px;
+	width: 100px;
+	color: #FFFFFF;
+	font-size: 19px;
+	font-weight: bold;
+	border-radius: 5px;
+	position: relative;
+	left: 5%;
+	text-align: center;
+	padding-top: 3px;
+	background-image: url("../css/images/search_icon.PNG");
+	background-size: 100px 70px;
+}
+
+.searchResultContainer {
+	display: inline-block;
+	width: 375px;
+	height: 275px;
+	margin: 1% 0 0 30%;
+	border-radius: 7%;
+	-webkit-box-shadow: -10px -8px 12px rgba(240, 10, 10, 1);
+	-moz-box-shadow: -10px -8px 12px rgba(240, 10, 10, 1);
+	box-shadow: -10px -8px 12px rgba(240, 10, 10, 1);
+}
+
+.homeScreenFooter {
+	width: 1349px;
+	text-align: center;
+	height: 60px;
+	background-color: #ffffff;
+	margin-top: 1%;
+}
+
+.homeScreenFooter > section {
+	height: 5px;
+	background-color: #f02f17;
+	width: 84%;
+	margin-left: 8%;
+	border-radius: 15px;
+	-webkit-box-shadow: 1px 5px 11px rgba(68, 50, 50, 0.59);
+	-moz-box-shadow: 1px 5px 11px rgba(68, 50, 50, 0.59);
+	box-shadow: 1px 5px 11px rgba(68, 50, 50, 0.59);
+}
+
+.homeScreenFooter > div {
+	display: inline-block;
+	color: #f02f17;
+	font-size: 16pt;
+	font-weight: bold;
+	position: relative;
+	margin: 1% 2%;
+}
+
+.homeScreenFooter > div:hover {
+	text-decoration: underline;
+	color: #ff1111;
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <TITLE>Home Page</TITLE>
+    <meta charset=utf-8/>
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"/>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+		<meta name="format-detection" content="telephone=no"/> 
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1"/>
+		<link rel="stylesheet" href="../css/jquery.mobile-1.2.0.min.css" media="screen"/>
+		<link rel="stylesheet" href="../css/homescreen.css" media="screen"/> 
+		
+    <script type="text/javascript" src="../js/jquery-1.8.2.min.js"></script>	
+
+</head>
+<body>
+	<!----------------------------Start of page------------------------------------------------>
+     <div class="pagebackground">
+	     <div class="headerArea">
+	     	<div class="headerlogo"></div>
+	     	<div class="headerContent">
+	     		<div class="signuplink"> Sign Up </div>
+	     		<div class="loginlink"> Log In </div>
+	     		<div class="postride"> Post your ride </div>
+	     	</div>
+	     </div>
+		<div class="destinationContent">
+		</div>
+	<!----------------------------Start of login content--------------------------------------->
+
+							
+	<!----------------------------End of page---------------------------------------------------->
+
+	</div>	
+</body>
+</html>
