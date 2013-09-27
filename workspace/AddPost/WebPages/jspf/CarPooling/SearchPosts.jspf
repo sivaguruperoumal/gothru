@@ -1,0 +1,9 @@
+<div class="row-fluid">
+    <div class="span3 float-left" style="background-color:#003366;min-height:300px;">
+        <h5 style="color: white;margin: 5px;text-align: center">Search</h5>
+        <hr style="background-color: white;min-height:5px;" />
+    </div>
+    <div class="span8 float-right">
+
+    </div>
+</div>
