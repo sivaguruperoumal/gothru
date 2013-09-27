@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <TITLE>Home Page</TITLE>
+    <meta charset=utf-8/>
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"/>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+		<meta name="format-detection" content="telephone=no"/> 
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1"/>
+		<link rel="stylesheet" href="../css/jquery.mobile-1.2.0.min.css" media="screen"/>
+		<link rel="stylesheet" href="../css/homescreen.css" media="screen"/> 
+		
+    <script type="text/javascript" src="../js/jquery-1.8.2.min.js"></script>	
+
+</head>
+<body>
+	<!----------------------------Start of page------------------------------------------------>
+     <div data-role="page" class="pagebackground">
+			<div class="loginBackground">	
+				<div id="logo"></div>
+			</div> 
+	<!----------------------------Start of login content--------------------------------------->
+			<div data-role="content" class="noPadding">
+				<div class="loginpanel">
+					<div class="loginStrip">
+					MYSHELF LOGIN
+					</div>					
+					<div class="loginbox">
+						<form id='login' action="javascript:loginproceed();">
+							<div class="usercontent">
+								<label class="username">USERNAME</label>
+								<input class="userinput" id="userinput" type="text" maxlength="10" onselectstart="return false" onpaste="return false;" onCopy="return false" onCut="return false" onDrag="return false" onDrop="return false" autocomplete=off />
+							</div>					
+							<div class="usercontent" id="usercontent">
+								<label class="username">PASSWORD</label>
+								<input class="userinput" id="passinput" type="password" onselectstart="return false" onpaste="return false;" onCopy="return false" onCut="return false" onDrag="return false" onDrop="return false" autocomplete=off/>
+							</div>	
+							<input class="loginButton" type="submit" value="LOGIN"/>
+						</form>	
+					</div>
+				</div>
+	<!----------------------------Footer------------------------------------------------------>
+				<div class="versionnumber copyright" >Version: 0.8</div>
+				<div class="copyright">
+				&#169; Copyright Johnson & Johnson Medical Australia, <script>document.write(new Date().getFullYear())</script>
+				</div>
+	<!----------------------------Popup error messages-----------------------------------------> 
+	<!----------------------------Authentication error message---------------------------------> 
+				 <div id="overlay">
+				 <div class="overlay-pos">
+					<div class="overlay-head">
+						<div class="cmt-text">ERROR</div>
+					</div>
+					<div class="item-div">
+						<div class="msg-text">Please ensure your username and password is correct. Then try again.</div>
+						<div class="button-section">
+							<div class="confirm-btns">
+								<div id="back-btn" class="button-effects back-btn-footer width-class-back" onclick="hideMe('overlay','overlay-back');accessAuthentication();">
+									<input type="button" value="Cancel" />
+								</div>
+							</div>
+						</div>
+					</div> 
+				</div>
+				</div>
+				<div id="overlay-back"></div>
+	<!----------------------------Downloading data popup---------------------------------------->				
+				<div id="downpop">
+					<div class="downpop-pos">
+						<div id="loadoverlayHead">
+							<div class="loadcmtText">DOWNLOADING HOSPITALS</div>
+						</div>
+						<div class="loaditemDiv">
+							<img src="../css/images/loader.gif" class="loadImg"/>
+							<div class="loadmsgText">Waiting for data. Please ensure your phone has good signal strength while downloading.</div>
+							
+							<div class="wrap">
+								<div class="barsection">
+									<div class="progress">
+										<div class="fill"></div>
+									</div> 
+								</div>
+								<div class="percent-text">
+									<span class="ptext">0%</span>
+								</div>      
+							</div> 
+							
+							<div class="loadbutton-div">
+								<div id="confirm-btns" class="confirm-button">
+									<div id="back-btn" class="button-effects back-btn-footer back-btn-footer-aling">
+										<input id="logout-btn" type="button" value="CANCEL" onclick="hidedownMe();"/>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					</div>				
+					<div id="down-back"></div>					
+	<!----------------------------Connection check popup------------------------------------------>					
+   <div id="loadpop">
+			<div class="loadpop-pos">
+				<div id="loadoverlayHead" class="loadoverlayHead">
+					<div class="loadcmtText" id="login-load-txt">Sending request..</div>
+				</div>
+				<div class="loaditemDiv">
+					<img src="../css/images/loader.gif" class="loaderImg">
+				</div>
+			</div>
+	 </div>
+	 <div id="load-back"></div>	 							
+	<!----------------------------Offline check popup--------------------------------------------->	
+				<div id="Chkoffline">
+					<div class="overlay-pos">
+						<div class="overlay-head">
+							<div class="cmt-text">ERROR</div>
+						</div>
+						<div class="item-div">
+							<div class="msg-text">No internet connection is detected. Please establish good signal strength or check your device's data service settings before trying again.<br>Would you like to login offline?</div>
+							<div class="button-section">
+								<div class="confirm-btns">
+									<div id="back-btn" class="button-effects back-btn-footer width-class" >
+										<input type="button" value="CONTINUE" onclick="navigateNextpage('Chkoffline','Chkoffline-back');retrieveNetworkConnectivity();" />						
+										</div>
+									<div id="confirm-btn" class="button-effects back-btn-footer width-class">
+										<input type="button" value="CANCEL" onclick="hideMe('Chkoffline','Chkoffline-back');accessAuthentication();" />             
+									</div>
+								</div>
+							</div>
+						</div> 
+					</div>
+				</div>
+				<div id="Chkoffline-back"></div>	  
+	<!----------------------------Timeout message popup--------------------------------------------->	
+			  <div id="Chktimeout">
+			  <div class="overlay-pos">
+					<div class="overlay-head">
+						<div class="cmt-text">CONNECTION TIMEOUT</div>
+					</div>
+					<div class="item-div">
+						<div class="msg-text">Your request has been timed out due to some technical issues.Please try again</div>
+						<div class="button-section">
+							<div class="confirm-btns">
+								<div id="back-btn" class="button-effects back-btn-footer width-class-back" onclick="hideMe('Chktimeout','Chktimeout-back');">
+									<input type="button" value="CONTINUE" />
+								</div>
+							</div>
+						</div>
+					</div> 
+				</div>
+				</div>
+				<div id="Chktimeout-back"></div>					
+	<!----------------------------End of page---------------------------------------------------->
+    </div>
+	</div>	
+</body>
+</html>
