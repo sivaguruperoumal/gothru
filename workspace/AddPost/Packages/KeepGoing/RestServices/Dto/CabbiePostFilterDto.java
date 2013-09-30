@@ -4,13 +4,13 @@
  */
 package KeepGoing.RestServices.Dto;
 
-import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlSchema;
 
 /**
  *
  * @author arunmozhi
  */
-@XmlRootElement
+
 public class CabbiePostFilterDto {
 
     private String _sourceLocation;

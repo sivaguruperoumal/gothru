@@ -1,3 +1,17 @@
+<script type="text/javascript">
+    var postData = {"cabbiePostFilterDto":{"destinationLocation":"Pondy","sourceLocation":"Chennai","travelDate":"10/10/2013"}};
+    $.ajax({
+        method:'GET',
+        url: '/Api/CabbiePost',
+         dataType: "json",
+        data:postData,
+        accept:'application/json',
+        contentType: "application/json; charset=utf-8",
+        success:function(response){
+            alert('Posted');
+        }
+    });
+</script>
 <div class="row-fluid">
     <div class="span3 float-left" style="background-color:#003366;min-height:300px;">
         <h5 style="color: white;margin: 5px;text-align: center">Search</h5>
