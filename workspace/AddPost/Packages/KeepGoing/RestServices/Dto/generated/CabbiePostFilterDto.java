@@ -8,6 +8,7 @@
 
 package generated;
 
+import javax.ws.rs.QueryParam;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlType;
@@ -40,82 +41,82 @@ import javax.xml.bind.annotation.XmlType;
     "sourceLocation",
     "travelDate"
 })
+        
 public class CabbiePostFilterDto {
-
-    protected String destinationLocation;
-    protected String sourceLocation;
-    protected String travelDate;
-
-    /**
-     * Gets the value of the destinationLocation property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getDestinationLocation() {
-        return destinationLocation;
-    }
-
-    /**
-     * Sets the value of the destinationLocation property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setDestinationLocation(String value) {
-        this.destinationLocation = value;
-    }
-
-    /**
-     * Gets the value of the sourceLocation property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getSourceLocation() {
-        return sourceLocation;
-    }
-
-    /**
-     * Sets the value of the sourceLocation property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setSourceLocation(String value) {
-        this.sourceLocation = value;
-    }
-
-    /**
-     * Gets the value of the travelDate property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getTravelDate() {
-        return travelDate;
-    }
-
-    /**
-     * Sets the value of the travelDate property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setTravelDate(String value) {
-        this.travelDate = value;
-    }
+    public String destinationLocation;
+    public String sourceLocation;
+    public String travelDate;
+//
+//    /**
+//     * Gets the value of the destinationLocation property.
+//     *
+//     * @return
+//     *     possible object is
+//     *     {@link String }
+//     *
+//     */
+//    public String getDestinationLocation() {
+//        return destinationLocation;
+//    }
+//
+//    /**
+//     * Sets the value of the destinationLocation property.
+//     *
+//     * @param value
+//     *     allowed object is
+//     *     {@link String }
+//     *
+//     */
+//    public void setDestinationLocation(String value) {
+//        this.destinationLocation = value;
+//    }
+//
+//    /**
+//     * Gets the value of the sourceLocation property.
+//     *
+//     * @return
+//     *     possible object is
+//     *     {@link String }
+//     *
+//     */
+//    public String getSourceLocation() {
+//        return sourceLocation;
+//    }
+//
+//    /**
+//     * Sets the value of the sourceLocation property.
+//     *
+//     * @param value
+//     *     allowed object is
+//     *     {@link String }
+//     *
+//     */
+//    public void setSourceLocation(String value) {
+//        this.sourceLocation = value;
+//    }
+//
+//    /**
+//     * Gets the value of the travelDate property.
+//     *
+//     * @return
+//     *     possible object is
+//     *     {@link String }
+//     *
+//     */
+//    public String getTravelDate() {
+//        return travelDate;
+//    }
+//
+//    /**
+//     * Sets the value of the travelDate property.
+//     *
+//     * @param value
+//     *     allowed object is
+//     *     {@link String }
+//     *
+//     */
+//    public void setTravelDate(String value) {
+//        this.travelDate = value;
+//    }
 
 }

@@ -4,11 +4,12 @@
  */
 package KeepGoing.RestServices;
 
-
-import generated.CabbiePostFilterDto;
-import generated.CabbiePostsDto;
-import java.util.ArrayList;
+import KeepGoing.RestServices.Dto.CabbiePostFilterDto;
+import KeepGoing.RestServices.Utility.UriParser;
 import javax.ws.rs.*;
+import javax.ws.rs.core.Context;
+import javax.ws.rs.core.Request;
+import javax.ws.rs.core.UriInfo;
 
 /**
  *
@@ -17,23 +18,18 @@ import javax.ws.rs.*;
 @Path("CabbiePost")
 public class CabbiePostService {
 
-    @Produces("application/json")
-    @Consumes("application/json")
-    @GET
-    public ArrayList<CabbiePostsDto> getCabbiePosts(@QueryParam("cabbiePostFilterDto") CabbiePostFilterDto cabbiePostFilterDto) {
-       ArrayList<CabbiePostsDto> cabbiePosts = new ArrayList<CabbiePostsDto>();
-       CabbiePostsDto c =new CabbiePostsDto();
-       c.setSourceLocation("Chennai");
-       c.setDestinationLocation("Pondy");
-       c.setTravelDate("10/10/2013");
-       cabbiePosts.add(c);
-       return cabbiePosts;
+    @Context UriInfo uriInfo;
+
+    @Path("/Search")
+    public CabbiePostSearchService searchCabbiePosts(@Context Request request, @Context UriInfo ui) {
+        UriParser<CabbiePostFilterDto> uriParser = new UriParser<CabbiePostFilterDto>(uriInfo);
+        return new CabbiePostSearchService(uriParser.Serialize());
     }
 
-//    @Produces("application/json")
-//    @Path("/{cabbiePostNo}")
-//    @GET
-//    public String getCabbiePosts(@PathParam("cabbiePostNo") int cabbiePostNo) {
-//        return "Hello "+cabbiePostNo;
-//    }
+    @Produces("application/json")
+    @Path("/{cabbiePostNo}")
+    @GET
+    public String getCabbiePosts(@PathParam("cabbiePostNo") int cabbiePostNo) {
+        return "Hello " + cabbiePostNo;
+    }
 }

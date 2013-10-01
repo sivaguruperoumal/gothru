@@ -11,33 +11,35 @@ import javax.xml.bind.annotation.XmlSchema;
  * @author arunmozhi
  */
 
-public class CabbiePostFilterDto {
+public class CabbiePostFilterDto extends FilterDtoBase {
 
-    private String _sourceLocation;
-    private String _destinationLocation;
-    private String _travelDate;
+    private String sourceLocation;
+    private String destinationLocation;
+    private String travelDate;
 
     public String getSourceLocation() {
-        return _sourceLocation;
+        return sourceLocation;
     }
 
     public void setSourceLocation(String value) {
-        _sourceLocation = value;
+        sourceLocation = value;
     }
 
     public String getDestinationLocation() {
-        return _destinationLocation;
+        return destinationLocation;
     }
 
     public void setDestinationLocation(String value) {
-        _destinationLocation = value;
+        destinationLocation = value;
     }
 
     public String getTravelDate() {
-        return _travelDate;
+        return travelDate;
     }
 
     public void setTravelDate(String value) {
-        _travelDate = value;
+        travelDate = value;
     }
+
+
 }
